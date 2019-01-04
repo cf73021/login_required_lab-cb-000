@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
   def current_user
-    @user = User.find(params[:id])
+    return head(:forbidden) unless session.include? :user_id
   end
 end
