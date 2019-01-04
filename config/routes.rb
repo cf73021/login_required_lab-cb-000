@@ -55,5 +55,6 @@ Rails.application.routes.draw do
   #   end
   resources :sessions
   get 'secrets/show'
+  post 'sessions/destroy'
 
 end
